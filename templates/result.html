@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi Harga Alpukat</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header-box">
+        <h2>Hasil Prediksi Harga Alpukat</h2>
+    </div>
+
+    <!-- Card Prediksi -->
+    <div class="result-card">
+        <h3>Harga Prediksi</h3>
+        <p class="prediksi-harga">${{ prediction }}</p>
+    </div>
+
+    <!-- Grafik Prediksi vs Aktual -->
+    <div class="graph-card">
+        <h3>Diagram Prediksi vs Aktual</h3>
+        <img src="/static/Prediksi vs Aktual Harga Alpukat.png"
+             alt="Prediksi vs Aktual">
+    </div>
+
+    <!-- Grafik Feature Importance -->
+    <div class="graph-card">
+        <h3>Feature Importance Random Forest</h3>
+        <img src="/static/Feature Importance Random Forest.png"
+             alt="Feature Importance">
+    </div>
+
+    <!-- Tombol Kembali -->
+    <a href="/" class="back-btn">Kembali ke Halaman Utama</a>
+
+</div>
+
+</body>
+</html>

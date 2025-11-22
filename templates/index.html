@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Harga Alpukat</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header-box">
+        <img src="/static/avocado.png" alt="Avocado Icon">
+        <h2>Prediksi Harga Alpukat</h2>
+    </div>
+
+    <!-- Contoh Input -->
+    <button type="button" onclick="isiContoh()" style="background:#1e88e5;">Isi Contoh Data</button>
+
+    <form id="formPrediksi" action="/predict" method="POST">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label>Tipe Avocado:</label>
+                <select name="type" id="type">
+                    {% for t in types %}
+                        <option value="{{ t }}">{{ t }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Region:</label>
+                <select name="region" id="region">
+                    {% for r in regions %}
+                        <option value="{{ r }}">{{ r }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Total Volume:</label>
+                <input type="number" id="total_volume" name="Total Volume" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label>4046 Small Avocado:</label>
+                <input type="number" id="kode4046" name="4046" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label>4225 Large Avocado:</label>
+                <input type="number" id="kode4225" name="4225" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label>4770 Extra Large Avocado:</label>
+                <input type="number" id="kode4770" name="4770" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label>Total Bags:</label>
+                <input type="number" id="total_bags" name="Total Bags" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label>Small Bags:</label>
+                <input type="number" id="small_bags" name="Small Bags" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label>Large Bags:</label>
+                <input type="number" id="large_bags" name="Large Bags" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label>XLarge Bags:</label>
+                <input type="number" id="xlarge_bags" name="XLarge Bags" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label>Tahun:</label>
+                <input type="number" id="year" name="year" required>
+            </div>
+
+            <!-- Button -->
+            <button type="submit">Prediksi Harga</button>
+
+        </div>
+    </form>
+</div>
+
+<!-- Script Example Input -->
+<script>
+function isiContoh() {
+    document.getElementById("type").value = "conventional";
+    document.getElementById("region").value = "NewYork";
+
+    document.getElementById("total_volume").value = 15489.50;
+    document.getElementById("kode4046").value = 6248.90;
+    document.getElementById("kode4225").value = 5902.23;
+    document.getElementById("kode4770").value = 324.12;
+
+    document.getElementById("total_bags").value = 3013.27;
+    document.getElementById("small_bags").value = 2800.10;
+    document.getElementById("large_bags").value = 200.55;
+    document.getElementById("xlarge_bags").value = 12.62;
+
+    document.getElementById("year").value = 2017;
+}
+</script>
+
+</body>
+</html>

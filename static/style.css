@@ -1,0 +1,187 @@
+/* =============================
+   GLOBAL STYLE
+============================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #e8f5e9, #c8e6c9);
+    margin: 0;
+    padding: 0;
+}
+
+/* =============================
+   CARD CONTAINER
+============================= */
+.container {
+    width: 60%;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    animation: fadeIn 0.6s ease;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =============================
+   HEADER WITH ICON
+============================= */
+.header-box {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header-box img {
+    width: 65px;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+}
+
+.header-box h2 {
+    margin-top: 10px;
+    font-size: 28px;
+    color: #1b5e20;
+    font-weight: 600;
+}
+
+/* =============================
+   2 COLUMN FORM
+============================= */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+/* Label + Input */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2e7d32;
+    margin-bottom: 6px;
+}
+
+input, select {
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #c8e6c9;
+    font-size: 15px;
+    transition: 0.25s;
+    background: #f9fff8;
+}
+
+input:focus, select:focus {
+    border-color: #66bb6a;
+    box-shadow: 0 0 8px rgba(76,175,80,0.3);
+    outline: none;
+}
+
+/* =============================
+   BUTTON
+============================= */
+button {
+    grid-column: span 2;
+    padding: 15px;
+    font-size: 18px;
+    background: #43a047;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #2e7d32;
+    transform: translateY(-2px);
+}
+
+/* =============================
+   RESPONSIVE HP
+============================= */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    button {
+        grid-column: span 1;
+    }
+}
+
+/* =============================
+   CARD UNTUK HALAMAN HASIL
+============================= */
+.result-card, .detail-card, .graph-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    margin-bottom: 25px;
+}
+
+.result-card h3,
+.detail-card h3,
+.graph-card h3 {
+    color: #1b5e20;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.prediksi-harga {
+    font-size: 34px;
+    color: #2e7d32;
+    font-weight: 700;
+    text-align: center;
+}
+
+.input-list {
+    list-style: none;
+    padding: 0;
+}
+
+.input-list li {
+    padding: 7px 0;
+    border-bottom: 1px solid #dcedc8;
+}
+
+.input-list li:last-child {
+    border-bottom: none;
+}
+
+.graph-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Tombol Kembali */
+.back-btn {
+    display: block;
+    text-align: center;
+    background: #1e88e5;
+    color: white;
+    padding: 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
